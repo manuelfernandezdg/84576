@@ -1,0 +1,62 @@
+/* Mi hoja de estilos */
+/*
+selector {
+  propiedad: valor;
+}
+*/
+
+/* Variables */
+html {
+  --bg-color-200:hsl(214, 25%, 11%);
+  --bg-color-400:hsl(212, 19%, 16%);
+  --bg-color-400-75:hsl(212, 19%, 16%, 75%);
+  --bg-color-500:hsl(212, 19%, 25%);
+
+  --text-color:hsl(215, 25%, 85%);
+
+  --accent-color-200:hsl(22, 44%, 12%);
+  --accent-color-400:hsl(22, 100%, 65%);
+  --accent-color-500:hsl(22, 100%, 85%);
+
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color-200);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+/* Ejemplo de modelo de caja en clase 2 */
+/* Usamos el selector de clase */
+.modelo-de-caja {
+  background-color: var(--bg-color-500);
+  padding: 16px;
+  border: 5px solid var(--accent-color-400) ; /* grosor de línea / estilo del borde / color del borde */
+  margin-top: 16px;
+  margin-right: auto;
+  margin-bottom: 16px;
+  margin-left: auto;
+  /* top right bottom left */
+  margin: 16px auto 16px auto;
+  /* top y bottom / right y left */
+  margin: 16px auto;
+  /* top / right y left / bottom */
+  margin: 16px auto 32px;
+
+  /* Tamaño del elemento */
+  width: min(350px, 75%);
+  min-height: 250px;
+}
+
+.item-1 {
+  box-sizing: content-box; /* Padding y Border suman al tamaño final del elemento */
+}
+
+.item-2 {
+  box-sizing: border-box; /* Ni padding, ni border suman para el tamaño final del elemento. */
+}
