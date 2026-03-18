@@ -35,7 +35,7 @@ body {
   color: var(--text-color);
   font-family: var(--font-family);
   margin: 0;
-  line-height: 1.6; /* Cuerpo + 60% */
+  line-height: 1.65; /* Cuerpo + 60% */
 }
 
 img {
@@ -64,9 +64,9 @@ section {
 
 section h1 {
   text-align: center; /* Alineación del texto */
-  font-size: 3rem; /* Tamaño del cuerpo de la tipografía */
+  font-size: 2.5rem; /* Tamaño del cuerpo de la tipografía */
   font-style: normal; /* Inclinación del eje de la tipografía */
-  font-weight: 400; /* Grosor de la línea */
+  font-weight: 300; /* Grosor de la línea */
 }
 
 #bienvenida {
