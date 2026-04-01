@@ -26,12 +26,12 @@ html {
 /* Estilos generales */
 * {
   box-sizing: border-box;
+  font-family: var(--font-family);
 }
 
 body {
   background-color: var(--bg-color-200);
   color: var(--text-color);
-  font-family: var(--font-family);
   margin: 0;
   line-height: 1.65; /* Cuerpo + 60% */
 }
@@ -285,4 +285,54 @@ a.btn-fill:active {
   color: var(--bg-color-200);
 }
 
-/*  */
+/* Clase 6, Formularios */
+#formulario form {
+  border: 0.2rem solid var(--accent-color-400);
+  padding: 2rem;
+  border-radius: 1rem;
+
+  width: min(25rem, 100%);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+#formulario h2 {
+  margin: 0;
+}
+
+#formulario form span {
+  margin-bottom: 0.5rem;
+  text-align: right;
+  color: var(--accent-color-400);
+}
+
+#formulario form input,
+#formulario form button {
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: 0.2rem solid var(--bg-color-500);
+}
+
+#formulario form button {
+  background-color: var(--bg-color-500);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+#formulario form button:hover {
+  background-color: var(--accent-color-400);
+  color: var(--bg-color-200);
+  border-color: var(--accent-color-400);
+  cursor: pointer;
+}
+
+#formulario form input:focus,
+#formulario form button:focus {
+  outline: 0.2rem solid var(--accent-color-400);
+}
