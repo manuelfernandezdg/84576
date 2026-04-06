@@ -29,6 +29,16 @@ html {
   font-family: var(--font-family);
 }
 
+a:focus {
+  outline: 0.2rem solid var(--accent-color-400);
+  outline-offset: 0.5rem;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
 body {
   background-color: var(--bg-color-200);
   color: var(--text-color);
@@ -335,4 +345,67 @@ a.btn-fill:active {
 #formulario form input:focus,
 #formulario form button:focus {
   outline: 0.2rem solid var(--accent-color-400);
+}
+
+/* Clase 7 */
+footer * {
+  margin: 0;
+}
+
+footer {
+  background-color: var(--bg-color-400);
+  padding: 0;
+}
+
+.contenedor-footer {
+  width: min(62rem, 100%);
+  margin: 0 auto;
+
+  padding: 2.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenedor-footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contenedor-footer h1 {
+  font-size: 1rem;
+}
+
+.contenedor-footer img {
+  width: 2rem;
+}
+
+/* Accesibilidad */
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  top: -4000px;
+  left: -4000px;
+  display: block;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+}
+
+a.accesibilidad:link,
+a.accesibilidad:visited {
+  background-image: url('../img/instagram-brands-solid-full.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 3rem;
+  aspect-ratio: 1;
+}
+
+a.accesibilidad:hover,
+a.accesibilidad:active {
+  background-image: url('../img/github-brands-solid-full.svg');
 }

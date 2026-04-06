@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Clase 6 del curso de Desarrollo Web con HTML y CSS en Educación IT: Formularios en HTML y CSS.">
+  <meta name="description" content="Clase 7 del curso de Desarrollo Web con HTML y CSS en Educación IT: Segunda parte sobre formularios en HTML y CSS.">
   <meta name="keywords" content="HTML, CSS, form">
-  <title>Clase 6</title>
-  <!-- Favicon generator: https://favicon.io/ -->
+  <title>Clase 7</title>
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -30,10 +29,16 @@
   </header>
   <main>
     <section id="bienvenida">
-      <h1>Bienvenidos a clase 6</h1>
+      <h1>Bienvenidos a clase 7</h1>
+    </section>
+    <section>
+      <h1>Accesibilidad</h1>
+      <a href="" target="_blank" rel="noopener noreferrer" aria-label="Podés agregarnos en nuestro Instagram" class="accesibilidad">
+        <span class="sr-only">Nuestro instagram</span>
+      </a>
     </section>
     <section id="formulario">
-      <h1>Formularios</h1>
+      <h1>Formularios 2</h1>
       <form action="">
         <h2>Registro</h2>
         <label for="nombre">Nombre</label>
@@ -45,12 +50,18 @@
         <span>Mensaje de estado</span>
         
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="email@dominio.com" required>
+        <input type="email" id="email" name="email" placeholder="email@dominio.com">
         <span>Mensaje de estado</span>
 
         <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{10,}$" title="La contraseña debe tener al menos 10 caracteres, 1 mayúscula, 1 número y 1 símbolo (!@#$%^&*)" required>
+        <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{10,}$" title="La contraseña debe tener al menos 10 caracteres, 1 mayúscula, 1 número y 1 símbolo (!@#$%^&*)">
         <span>Mensaje de estado</span>
+
+        <label>¿Querés recibir novedades por email?
+          <br>
+          <input type="radio" name="newsletter" value="si" checked> Si
+          <input type="radio" name="newsletter" value="no"> No
+        </label>
 
         <button>Registrame</button>
       </form>
