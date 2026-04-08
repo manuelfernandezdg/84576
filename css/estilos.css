@@ -29,14 +29,9 @@ html {
   font-family: var(--font-family);
 }
 
-a:focus {
+a:focus-visible {
   outline: 0.2rem solid var(--accent-color-400);
   outline-offset: 0.5rem;
-}
-
-a:focus:not(:focus-visible),
-button:focus:not(:focus-visible) {
-  outline: none;
 }
 
 body {
@@ -322,11 +317,17 @@ a.btn-fill:active {
 }
 
 #formulario form input,
-#formulario form button {
+#formulario form button,
+#formulario form select,
+#formulario form textarea {
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
   font-size: 1rem;
   border: 0.2rem solid var(--bg-color-500);
+}
+
+#formulario form textarea {
+  min-height: 12rem;
 }
 
 #formulario form button {
@@ -342,8 +343,14 @@ a.btn-fill:active {
   cursor: pointer;
 }
 
-#formulario form input:focus,
-#formulario form button:focus {
+button {
+  outline: none;
+}
+
+#formulario form input:focus-visible,
+#formulario form button:focus-visible,
+#formulario form select:focus-visible,
+#formulario form textarea:focus-visible {
   outline: 0.2rem solid var(--accent-color-400);
 }
 
@@ -384,6 +391,12 @@ footer {
 }
 
 /* Accesibilidad */
+.contenedor-accesibilidad {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
 /* Screen Reader Only */
 .sr-only {
   position: absolute;
@@ -397,7 +410,6 @@ footer {
 
 a.accesibilidad:link,
 a.accesibilidad:visited {
-  background-image: url('../img/instagram-brands-solid-full.svg');
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
@@ -407,5 +419,39 @@ a.accesibilidad:visited {
 
 a.accesibilidad:hover,
 a.accesibilidad:active {
-  background-image: url('../img/github-brands-solid-full.svg');
+  display: block;
+}
+
+a.notificaciones:link,
+a.notificaciones:visited {
+  background-image: url('../img/notifications-outline.svg');
+}
+
+a.notificaciones:hover,
+a.notificaciones:active {
+  background-image: url('../img/notifications-fill.svg');
+}
+
+a.favoritos:link,
+a.favoritos:visited {
+  background-image: url('../img/favorite-outline.svg');
+}
+
+a.favoritos:hover,
+a.favoritos:active {
+  background-image: url('../img/favorite-fill.svg');
+}
+
+a.home:link,
+a.home:visited {
+  background-image: url('../img/home-outline.svg');
+}
+
+a.home:hover,
+a.home:active {
+  background-image: url('../img/home-fill.svg');
+}
+
+video {
+  width: 100%;
 }

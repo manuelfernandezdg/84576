@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Clase 7 del curso de Desarrollo Web con HTML y CSS en Educación IT: Segunda parte sobre formularios en HTML y CSS.">
+  <meta name="description" content="Clase 8 del curso de Desarrollo Web con HTML y CSS en Educación IT: Segunda parte sobre formularios en HTML y CSS.">
   <meta name="keywords" content="HTML, CSS, form">
-  <title>Clase 7</title>
+  <title>Clase 8</title>
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -31,50 +31,60 @@
   </header>
   <main>
     <section id="bienvenida">
-      <h1>Bienvenidos a clase 7</h1>
-    </section>
-    <section>
-      <h1>Accesibilidad</h1>
-      <div class="contenedor-accesibilidad">
-        <a href="" target="_blank" rel="noopener noreferrer" aria-label="Podés agregarnos en nuestro Instagram" class="accesibilidad favoritos">
-          <span class="sr-only">Favoritos</span>
-        </a>
-        <a href="" target="_blank" rel="noopener noreferrer" aria-label="Podés agregarnos en nuestro Instagram" class="accesibilidad home">
-          <span class="sr-only">Inicio</span>
-        </a>
-        <a href="" target="_blank" rel="noopener noreferrer" aria-label="Podés agregarnos en nuestro Instagram" class="accesibilidad notificaciones">
-          <span class="sr-only">Notificaciones</span>
-        </a>
-      </div>
+      <h1>Bienvenidos a clase 8</h1>
     </section>
     <section id="formulario">
-      <h1>Formularios 2</h1>
+      <h1>Formularios 3</h1>
       <form action="">
-        <h2>Registro</h2>
+        <h2>Enviar mensaje</h2>
         <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamás?">
+        <input type="text" id="nombre" name="nombre" required placeholder="¿Cómo te llamás?">
         <span>Mensaje de estado</span>
 
-        <label for="apellido">Apellido</label>
-        <input type="text" id="apellido" name="apellido" placeholder="¿Cuál es tu apellido?">
-        <span>Mensaje de estado</span>
-        
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="email@dominio.com">
+        <label for="asunto">Asunto</label>
+        <select name="asunto" id="asunto">
+          <option value="suscripcion" selected>Mi suscripción</option>
+          <option value="pedido">Mi pedido</option>
+          <option value="novedades">Mis novedades</option>
+          <option value="otra">Otra consulta</option>
+        </select>
+        <br>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea name="mensaje" id="mensaje" required></textarea>
         <span>Mensaje de estado</span>
 
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{10,}$" title="La contraseña debe tener al menos 10 caracteres, 1 mayúscula, 1 número y 1 símbolo (!@#$%^&*)">
-        <span>Mensaje de estado</span>
-
-        <label>¿Querés recibir novedades por email?
+        <div>
+          ¿Cuáles son tus favoritos? <br>
+          <input type="checkbox" id="manga" value="manga">
+          <label for="manga">Manga</label>
           <br>
-          <input type="radio" name="newsletter" value="si" checked> Si
-          <input type="radio" name="newsletter" value="no"> No
-        </label>
-
-        <button>Registrame</button>
+          <input type="checkbox" id="comics" value="comics">
+          <label for="comics">Comics</label>
+          <br>
+          <input type="checkbox" id="fantasia" value="fantasia">
+          <label for="fantasia">Fantasía</label>
+          <br>
+          <input type="checkbox" id="ciencia-ficcion" value="ciencia-ficcion">
+          <label for="ciencia-ficcion">Ciencia Ficción</label>
+        </div>
+        <br>
+        <button>Enviar mensaje</button>
       </form>
+      <br>
+      <ul>
+        <li><a href="https://www.w3schools.com/tags/tag_select.asp" target="_blank" rel="noopener noreferrer">Campo select</a></li>
+        <li><a href="https://www.w3schools.com/tags/att_input_type_checkbox.asp" target="_blank" rel="noopener noreferrer">Input: checkbox</a></li>
+      </ul>
+    </section>
+    <section>
+      
+      <h1>Video</h1>
+
+      <video muted autoplay loop>
+        <source src="media/comic-1.mp4" type="video/mp4">
+      </video>
+
     </section>
   </main>
   <footer>
