@@ -1,5 +1,5 @@
 /* Tipografía Inter desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Variables */
 html {
@@ -16,6 +16,7 @@ html {
   --accent-color-500:hsl(22, 100%, 85%);
   /* Familia tipográfica */
   --font-family: "Inter", sans-serif;
+  --font-Montserrat: "Montserrat", sans-serif;
 }
 
 /* rem, root em, 1rem = 16px
@@ -454,4 +455,141 @@ a.home:active {
 
 video {
   width: 100%;
+}
+
+/* Clase 9 - Resolución del ejercicio final */
+/* Productos */
+
+/* Quito todos los márgenes para que no molesten */
+.contenedor-producto * {
+  margin: 0;
+  font-family: var(--font-Montserrat);
+}
+
+.contenedor-producto {
+  display: flex;
+  gap: 1rem;
+  padding: 8rem 1rem;
+}
+
+/* Columna izquierda */
+.contenedor-p-izq {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  width: 20rem;
+}
+
+/* Atención! */
+.contenedor-p-izq img {
+  width: auto;
+}
+
+/* Columna derecha */
+.contenedor-p-der {
+  width: 34rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem; 
+}
+
+.contenedor-p-btn {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contenedor-p-der h1 {
+  color: var(--accent-color-400);
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.contenedor-p-der h2 {
+  color: var(--accent-color-400);
+}
+
+/* Botones */
+.pill,
+.btn-p-fill {
+  background-color: var(--accent-color-400);
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid var(--accent-color-400);
+  font-weight: 800;
+}
+
+.pill {
+  border-radius: 2rem;
+  font-size: 0.8rem;
+}
+
+.btn-p-fill {
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.pill:hover,
+.btn-p-fill:hover {
+  background-color: var(--accent-color-500);
+  border: 0.1rem solid var(--accent-color-500);
+  cursor: pointer;
+}
+
+/* Contacto */
+.contenedor-contacto * {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.contenedor-contacto {
+  display: flex;
+}
+
+.contacto-izq {
+  width: 34rem;
+}
+
+.contacto-der {
+  width: 24rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 1rem;
+}
+
+.contacto-der ul {
+  list-style: none;
+}
+
+#contacto iframe {
+  width: 100%;
+  min-height: 32rem;
+  padding: 1rem 0;
+  border: none;
+}
+
+/* Introducción a diseño responsive */
+@media all and (max-width:780px) {
+  header ul {
+    flex-direction: column;
+  }
+
+  .contenedor-producto {
+    flex-direction: column;
+  }
+
+  .contenedor-producto img {
+    width: auto;
+  }
+
+  .contenedor-p-der,
+  .contenedor-p-izq {
+    justify-content: center;
+    width: 100%;
+  }
 }
